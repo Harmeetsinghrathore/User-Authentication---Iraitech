@@ -1,0 +1,46 @@
+<%- include('layouts/header') %>
+<div class="container mt-5 text-center">
+  <h1>Sign Up</h1>
+
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/signup" method="POST" enctype="multipart/form-data">
+          
+            <div class="form-group text-left">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group text-left">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group text-left">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group text-left">
+              <label for="email">Mobile</label>
+              <input type="text" class="form-control" name="mobile" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="form-group text-left">
+              <label for="image">Profile Picture</label> <br>
+              <input type="file"  name="image" required>
+            </div>
+ 
+            <button type="submit" class="btn btn-dark" value="Register" >Sign Up</button>
+            <a class="btn btn-dark m-2 " href="/login" type="button">Login</a>
+
+            
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<%- include('layouts/header') %>

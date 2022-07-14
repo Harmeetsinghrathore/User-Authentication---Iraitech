@@ -1,0 +1,51 @@
+<%- include('layouts/header') %>
+
+
+
+<div class=" centered m-5" >
+  <div class="container">
+     
+    <h1 class="display-3"> <b> All Users</b> </h1>
+
+    <hr>
+  </div>
+</div>
+<table class="table" width = "50%" >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Picture</th>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% 
+    if (userData.length > 0){ 
+        for(let i=0; i<userData.length; i++){
+            %>
+            <tr>
+                <td> <img src="/images/<%= userData[i].image %>" alt="<%= userData[i].image %>" width="100px" height="100px"> </td>
+                <td> <%= userData[i].image %></td>
+                <td> <%= userData[i].name %></td>
+                <td> <%= userData[i].email %></td>
+                <td> <%= userData[i].mobile %></td>
+            </tr>
+            <%
+        }
+    }else{
+        %>
+            <tr> 
+                <td colspan = "5" > Users not found! </td>
+            </tr>
+
+        <%
+    }
+    %>
+  </tbody>
+
+</table>     
+
+<%- include('layouts/footer') %>

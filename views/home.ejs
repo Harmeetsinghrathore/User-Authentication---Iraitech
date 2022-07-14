@@ -1,0 +1,36 @@
+<%- include('layouts/header') %>
+
+
+<div class=" centered m-5" >
+  <div class="container">
+    <img width="220px;" height="180px;"  src="images/<%= userData.image %>" alt=""></td> 
+    <h1 class="display-3"> <b>My Profile </b> </h1>
+    <p class="lead">This is your own personal space.</p>
+
+    <a class="btn btn-dark m-2 " href="/logout" type="button">Logout</a>
+    <a class="btn btn-dark m-2 " href="/edit?id = <%=userData._id %>" type="button">Edit</a>
+
+    <hr>
+  </div>
+</div>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">  ID            </th>
+      <th scope="col">  Name          </th>
+      <th scope="col">  Email         </th>
+      <th scope="col">  Phone Number  </th>
+    </tr>
+  </thead>
+    <tbody>
+    <tr>
+      <td>  <%= userData._id    %>   </td>
+      <td>  <%= userData.name   %>   </td>
+      <td>  <%= userData.email  %>   </td>
+      <td>  <%= userData.mobile %>   </td>
+    </tr> 
+  </tbody>
+
+</table>     
+
+<%- include('layouts/footer') %>
